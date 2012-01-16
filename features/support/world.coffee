@@ -3,6 +3,17 @@ exports.World = (callback) ->
   {@BasicAI} = require '../../basicAI'
   {@c} = require '../../cards' if exports?
 
+  # Allows us to record data from calls into the BasicAI to observe choices
+  @TestAI = class extends @BasicAI
+    constructor: ->
+      @choices = {}
+
+    choose: (type, state, choices) ->
+      result = super
+      @choices[type] ||= []
+      @choices[type].push result
+      result
+
   # Given a plain-English list of cards, separated by commas and/or an "and",
   # returns an array of card instances corresponding to the list
   #
