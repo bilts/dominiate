@@ -26,35 +26,42 @@ does.
 
 Installation
 ------------
-To use the command-line version, you will need a reasonable development
-environment with a command line.
 
-First, acquire node.js (v0.4 or later) and npm (the Node Package Manager).  The
-best way to do this differs by operating system and changes a lot.
+Dominiate runs [in your web browser](http://rspeer.github.com/dominiate/play.html)
+You do not need to install anything to use it.  Follow these instructions if
+you wish to modify the Dominiate code.
 
-Enable CoffeeScript by running `sudo npm-g install coffee-script` (or whatever
-the equivalent is on Windows). Now node.js will understand CoffeeScript source
-files.
+### UNIX
 
-Running "./play.coffee bot1 bot2" will load the bots with the
-specified names and play them against each other. For example:
+Download and install node.js from [nodejs.org](http://nodejs.org)
+
+Install npm from [npmjs.org/](http://npmjs.org/)
+
+    curl http://npmjs.org/install.sh | sh
+
+In the Dominiate project directory, install Dominiate's dependencies
+
+    npm install
+
+Update your PATH environment variable so it can find the installed scripts
+
+    export PATH=./node_modules/bin:$PATH
+
+Update your shell login script to set this every time you open a shell
+
+    echo "export PATH=./node_modules/bin:$PATH" >> ~/.profile
+
+Run `make` to build the web app.  Open "web/play.html" in a browser to view
+the web app.
+
+You may also run Dominiate in a terminal by running `./play.coffee`, and
+specifying the desired strategies on the command line
 
     ./play.coffee strategies/BigMoney.coffee strategies/ChapelWitch.coffee
 
-Building the Web app
---------------------
-The Web version of Dominiate is built using CoffeeScript and Less CSS.
+### Windows
 
-**On a reasonable UNIX computer** (including Linux and Mac OS):
-Follow the instructions above to set up CoffeeScript. You should also install
-Less CSS with `sudo npm-g install less`.
-
-Then, type `make` to build the JavaScript and CSS files that will be used
-on the Web.
-
-Do not edit the computer-written JavaScript directly! That way lies madness.
-
-**On Windows**: you can now compile the CoffeeScript files on Windows, using an
+You can now compile the CoffeeScript files on Windows, using an
 included CoffeeScript compiler, `windows/coffee.exe`. (Being an .exe file
 downloaded from the Internet, you of course run this at your own risk.)
 

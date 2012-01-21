@@ -1,0 +1,24 @@
+{
+  "name" : "dominiate",
+  "description" : "A simulator for Dominion card game strategies",
+  "keywords" : ["Dominion", "strategies", "simulator", "ai", "game"],
+  "version" : "1.0.0",
+  "bugs" : "https://github.com/rspeer/dominiate/issues",
+  "licenses" : [{
+    "type" : "AGPL",
+    "url" : "https://github.com/rspeer/dominiate/blob/master/LICENSE.txt"
+  }],
+  "engines" : {
+    "node" : ">=0.4.0",
+    "npm"  : ""
+  },
+  "homepage" : "http://rspeer.github.com/dominiate/",
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/rspeer/dominiate.git"
+  },
+  "dependencies" : {
+    "coffee-script" : ">=1.1.0" ,
+    "less" : ""
+  }
+}

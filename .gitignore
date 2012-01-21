@@ -13,3 +13,4 @@ web/multiLog.js
 web/scoreTracker.js
 web/strategies.js
 web/libs/bootstrap
+node_modules
